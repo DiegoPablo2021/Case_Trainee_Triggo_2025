@@ -1,0 +1,18 @@
+// Modelo Relacional Olist
+digraph {
+	orders [label=orders]
+	order_items [label=order_items]
+	order_payments [label=order_payments]
+	order_reviews [label=order_reviews]
+	customers [label=customers]
+	products [label=products]
+	sellers [label=sellers]
+	geolocation [label=geolocation]
+	orders -> order_items [label=order_id]
+	orders -> order_payments [label=order_id]
+	orders -> order_reviews [label=order_id]
+	orders -> customers [label=customer_id]
+	order_items -> products [label=product_id]
+	order_items -> sellers [label=seller_id]
+	customers -> geolocation [label=customer_zip_code_prefix]
+}
