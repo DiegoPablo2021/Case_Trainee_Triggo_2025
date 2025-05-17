@@ -4,33 +4,8 @@ Este projeto tem como objetivo realizar uma análise completa dos dados de venda
 
 ## Estrutura de Pastas
 
-
-📁 triggo-data-challenge/
-│
-├── .venv/                      # Ambiente virtual Python
-│   ├── Include/
-│   ├── Lib/
-│   ├── Scripts/
-│   ├── share/
-│   ├── pyvenv.cfg
-│   └── .gitignore
-│
-├── data/                       # Dados brutos (CSV)
-│   ├── olist_customers_dataset.csv
-│   ├── olist_geolocation_dataset.csv
-│   ├── olist_order_items_dataset.csv
-│   ├── olist_order_payments_dataset.csv
-│   ├── olist_order_reviews_dataset.csv
-│   ├── olist_orders_dataset.csv
-│   ├── olist_products_dataset.csv
-│   ├── olist_sellers_dataset.csv
-│   └── product_category_name_translation.csv
-│
-├── notebooks/                  # Cadernos Jupyter com as análises
-│   └── triggo_data_analysis.ipynb
-│
-├── README.md                   # Este arquivo
-└── requirements.txt            # Dependências do projeto
+📁 Case_Trainee_Triggo_2025/
+![alt text](image.png)
 
 
 ## Visão Geral do Projeto
@@ -86,20 +61,27 @@ Os dados estão organizados em múltiplos arquivos `.csv`, incluindo:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/DiegoPablo2021/triggo-data-challenge.git
-   cd triggo-data-challenge
+   git clone https://github.com/DiegoPablo2021/Case_Trainee_Triggo_2025.git
+   cd Case_Trainee_Triggo_2025
    ```
 
-2. Instale as dependências:
+2. Crie um ambiente virtual
+   ```bash
+   python -m venv venv
+   venv/Scripts/activate
+   ```
+
+3. Instale as dependências:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Execute o notebook:
+4. Execute o notebook:
    ```bash
-   jupyter notebook notebooks/triggo_data_analysis.ipynb 
+   jupyter notebook notebooks/etl-data.ipynb
+   jupyter notebook notebooks/dashboard.ipynb
+   jupyter notebook customer-segmentation/notebooks/customer_segmentation.ipynb
    ```
-
 
 ## Autor
 
