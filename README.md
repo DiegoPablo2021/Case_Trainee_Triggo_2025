@@ -15,6 +15,12 @@ Este projeto foi desenvolvido como parte de um teste técnico para o **Programa 
 ### 🎥 Demonstração do Projeto
 <img src="dashboard_demo.webp" width="100%" alt="Dashboard Demo">
 
+<br/>
+
+### 📈 Evolução de Vendas ao Longo do Tempo
+*Gráfico estático gerado diretamente da pipeline de análise de dados.*
+<img src="evolucao_vendas.png" width="100%" alt="Evolução de Vendas">
+
 ---
 
 ## 🚀 Arquitetura e Engenharia de Software (Nível Sênior)
