@@ -12,9 +12,6 @@ Este projeto apresenta uma análise avançada dos dados de vendas do e-commerce 
 
 Este projeto foi desenvolvido como parte de um teste técnico para o **Programa de Trainee da Triggo.ai - Excelência em Engenharia de Dados e DataOps (2025)**.
 
-### 🎥 Demonstração do Projeto
-<img src="dashboard_demo.gif" width="100%" alt="Dashboard Demo">
-
 <br/>
 
 ### 📈 Evolução de Vendas ao Longo do Tempo
