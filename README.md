@@ -23,7 +23,7 @@ Este projeto foi desenvolvido como parte de um teste técnico para o **Programa 
 
 ---
 
-## 🚀 Arquitetura e Engenharia de Software (Nível Sênior)
+## 🚀 Arquitetura e Engenharia de Software
 
 O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as melhores práticas de Engenharia de Software aplicadas a Data Science:
 
