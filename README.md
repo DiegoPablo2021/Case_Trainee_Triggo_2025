@@ -48,7 +48,7 @@ O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as 
  ┃ ┃ ┣ 📜 test_clustering.py
  ┃ ┃ ┗ 📜 test_marketing_strategies.py
  ┣ 📂 data                    # Diretório raiz para datasets (Olist CSVs)
- ┣ 📜 customer_segmentation.ipynb # Notebook dinâmico Sênior para modelagem
+ ┣ 📜 customer_segmentation.ipynb # Notebook dinâmico para modelagem
  ┣ 📜 dashboard.ipynb         # Dashboard visual interativo
  ┗ 📜 requirements.txt        # Dependências padronizadas
 ```
