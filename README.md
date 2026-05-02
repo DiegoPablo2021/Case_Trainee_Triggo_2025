@@ -1,4 +1,4 @@
-# 📊 Análise de Dados do E-commerce Olist & Segmentação de Clientes
+# Análise de Dados do E-commerce Olist & Segmentação de Clientes
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
@@ -14,13 +14,13 @@ Este projeto foi desenvolvido como parte de um teste técnico para o **Programa 
 
 <br/>
 
-### 📈 Evolução de Vendas ao Longo do Tempo
+### Evolução de Vendas ao Longo do Tempo
 *Gráfico estático gerado diretamente da pipeline de análise de dados.*
 <img src="evolucao_vendas.png" width="100%" alt="Evolução de Vendas">
 
 ---
 
-## 🚀 Arquitetura e Engenharia de Software
+## Arquitetura e Engenharia de Software
 
 O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as melhores práticas de Engenharia de Software aplicadas a Data Science:
 
@@ -32,10 +32,10 @@ O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as 
 
 ---
 
-## 📁 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```text
-📦 Case_Trainee_Triggo_2025
+Case_Trainee_Triggo_2025
  ┣ 📂 customer-segmentation   # Core de Machine Learning e Segmentação
  ┃ ┣ 📂 src                   # Bibliotecas OOD de Processamento e Previsões
  ┃ ┃ ┣ 📜 logger.py
@@ -53,7 +53,7 @@ O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as 
  ┗ 📜 requirements.txt        # Dependências padronizadas
 ```
 
-## 📊 Principais KPIs Alcançados
+## Principais KPIs Alcançados
 
 | Indicador | Resultado |
 |----------|-----------|
@@ -68,7 +68,7 @@ O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as 
 
 ---
 
-## 🛠️ Instalação e Execução
+## Instalação e Execução
 
 ### 1. Pré-Requisitos
 > [!IMPORTANT]  
@@ -103,7 +103,7 @@ jupyter notebook dashboard.ipynb
 
 ---
 
-## 🧑‍💻 Autor
+## Autor
 
 Desenvolvido por **Diego Pablo de Menezes**
 
