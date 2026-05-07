@@ -1,113 +1,122 @@
-# Análise de Dados do E-commerce Olist & Segmentação de Clientes
+# Triggo Case Study
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
-  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-  <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest">
-  <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" alt="Jupyter">
-</p>
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-Tested-0A9EDC?logo=pytest&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
 
-Este projeto apresenta uma análise avançada dos dados de vendas do e-commerce brasileiro **Olist**. O objetivo principal é extrair insights estratégicos com foco em Machine Learning, Engenharia de Dados e DataOps, visando otimizar resultados comerciais, segmentar clientes com precisão e avaliar a logística de entregas.
+![Triggo dashboard demo](dashboard_demo.gif)
 
-Este projeto foi desenvolvido como parte de um teste técnico para o **Programa de Trainee da Triggo.ai - Excelência em Engenharia de Dados e DataOps (2025)**.
+Technical case built for the Triggo trainee process, framed as a production-minded analytics artifact rather than a one-off notebook. The project combines customer segmentation, clustering evaluation, testing, logging, and business interpretation over the Olist e-commerce dataset.
 
-<br/>
+## Executive Summary
 
-### Evolução de Vendas ao Longo do Tempo
-*Gráfico estático gerado diretamente da pipeline de análise de dados.*
-<img src="evolucao_vendas.png" width="100%" alt="Evolução de Vendas">
+This repository shows how a machine learning exercise can be elevated into a stronger portfolio case by adding:
 
----
+- a structured data-preparation flow
+- silhouette-driven cluster selection instead of arbitrary segmentation
+- test coverage for key analytical behaviors
+- logging and error-handling discipline
+- a business layer that translates model output into actionable customer strategies
 
-## Arquitetura e Engenharia de Software
+The result is not just clustering. It is a more mature analytical narrative that connects engineering discipline to marketing and commercial decision support.
 
-O repositório foi arquitetado utilizando **Object-Oriented Design (OOD)** e as melhores práticas de Engenharia de Software aplicadas a Data Science:
+## Business Problem
 
-- **Robusto Pipeline de Tratamento de Dados**: Utilização de uma classe stateful `CustomerDataProcessor` com centralização do `StandardScaler` para previsibilidade nos pipelines.
-- **Clustering com IA Dinâmica**: O módulo `CustomerSegmenter` detecta de forma automática o melhor número de clusters ($k$) utilizando a métrica do **Silhouette Score**, dispensando constantes arbitrárias.
-- **Estratégias de Marketing Automatizadas**: A classe `MarketingStrategist` recebe avaliações da inteligência de clustering e gera campanhas/ações dinâmicas para Upsell, Cross-sell e Retenção.
-- **Log Centralizado e Error Handling rigoroso**: Implementação de sistema de *Logging* global `src/logger.py` e capturas rigorosas de exceções (EmptyData, FileNotFoundError).
-- **Test-Driven Analytics**: Suíte de testes unitários contínua rodando sob `pytest` para garantir a imutabilidade algorítmica e previnir *Data Leaks*.
+The challenge was to extract useful customer segments from a large transactional dataset while preserving explainability and business relevance. The solution needed to go beyond exploratory analysis and demonstrate a path from raw data to segmentation logic that could support retention, activation, and upsell decisions.
 
----
+## What Was Built
 
-## Estrutura do Repositório
+### 1. Data Preparation Layer
+
+The pipeline profiles and prepares Olist data for segmentation, with reusable preprocessing logic and centralized scaling behavior.
+
+### 2. Clustering Layer
+
+Customer groups are evaluated through silhouette-score-driven logic, making the segmentation more defensible than choosing a fixed number of clusters by intuition.
+
+### 3. Operational Hardening
+
+The project includes Pytest coverage and logging so the workflow is easier to validate, reuse, and trust.
+
+### 4. Business Translation
+
+The final notebook/dashboard turns technical segmentation output into a more executive-facing story with customer behavior interpretation and next-action framing.
+
+## Repository Structure
 
 ```text
-Case_Trainee_Triggo_2025
- ┣ 📂 customer-segmentation   # Core de Machine Learning e Segmentação
- ┃ ┣ 📂 src                   # Bibliotecas OOD de Processamento e Previsões
- ┃ ┃ ┣ 📜 logger.py
- ┃ ┃ ┣ 📜 data_preprocessing.py
- ┃ ┃ ┣ 📜 clustering.py
- ┃ ┃ ┣ 📜 analysis.py
- ┃ ┃ ┗ 📜 marketing_strategies.py
- ┃ ┣ 📂 tests                 # Pytest Suíte de Integração
- ┃ ┃ ┣ 📜 test_data_preprocessing.py
- ┃ ┃ ┣ 📜 test_clustering.py
- ┃ ┃ ┗ 📜 test_marketing_strategies.py
- ┣ 📂 data                    # Diretório raiz para datasets (Olist CSVs)
- ┣ 📜 customer_segmentation.ipynb # Notebook dinâmico para modelagem
- ┣ 📜 dashboard.ipynb         # Dashboard visual interativo
- ┗ 📜 requirements.txt        # Dependências padronizadas
+case-triggo/
+├── customer-segmentation/
+│   ├── src/
+│   │   ├── analysis.py
+│   │   ├── clustering.py
+│   │   ├── data_preprocessing.py
+│   │   ├── logger.py
+│   │   ├── marketing_strategies.py
+│   │   └── utils.py
+│   ├── tests/
+│   └── README.md
+├── data/
+├── notebooks/
+├── tests/
+├── customer_segmentation.ipynb
+├── dashboard.ipynb
+├── dashboard_demo.gif
+├── evolucao_vendas.png
+└── requirements.txt
 ```
 
-## Principais KPIs Alcançados
+## Technical Highlights
 
-| Indicador | Resultado |
-|----------|-----------|
-| **Total de Pedidos Processados** | 99.441 |
-| **Ticket Médio** | R$ 118,00 |
-| **Categorias Líderes** | Eletrônicos, Móveis, Moda |
-| **Tempo Médio de Entrega** | 12 dias |
-| **Taxa de Atraso Logístico** | 21,8% |
-| **Avaliação Sistêmica de Satisfação**| 4.09 / 5.0 |
-| **Acurácia do Modelo Preditivo (RF)**| 81% |
-| **Segmentos Identificados de Clientes**| Dinâmico (Sihouette Score $\ge 0.5$) |
+- `CustomerDataProcessor` centralizes preprocessing and scaling behavior
+- `CustomerSegmenter` evaluates clustering quality with silhouette logic
+- `MarketingStrategist` converts cluster interpretation into business actions
+- `pytest` validates preprocessing, clustering, and marketing logic
+- notebooks keep the presentation layer separate from the reusable codebase
 
----
+## Key Signals
 
-## Instalação e Execução
+- Dynamic cluster selection instead of fixed segmentation
+- Test-driven analytical workflow
+- Logging and error handling for stronger reproducibility
+- Business-ready interpretation of ML output
 
-### 1. Pré-Requisitos
-> [!IMPORTANT]  
-> Os conjuntos de dados originais foram removidos do controle de versão (`git`) devido ao tamanho.
-> Baixe a coleção oficial do [Kaggle – Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e extraia os `.csv` originais para a pasta `data/`.
+## How To Run
 
-### 2. Configurando o Ambiente
-Clone este repositório corporativo e inicie seu ambiente isolado:
+### 1. Create and activate a virtual environment
+
 ```bash
-git clone https://github.com/DiegoPablo2021/Case_Trainee_Triggo_2025.git
-cd Case_Trainee_Triggo_2025
-
-# Crie e ative a virtual environment
 python -m venv venv
-venv\Scripts\activate   # No Windows
-# source venv/bin/activate # No Linux/Mac
+venv\Scripts\activate
+```
 
-# Instale os pacotes e dependências OOD
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 3. Executando os Pipelines
-Valide a arquitetura do projeto utilizando testes rigorosos e inicialize os ambientes iterativos:
-```bash
-# Executa TDD (Test-Driven Development) da modelagem de ML
-pytest customer-segmentation/tests/
+### 3. Run tests
 
-# Carrega a visualização avançada de Negócios e Segmentação
+```bash
+pytest customer-segmentation/tests/
+```
+
+### 4. Open the analytical notebooks
+
+```bash
 jupyter notebook customer_segmentation.ipynb
 jupyter notebook dashboard.ipynb
 ```
 
----
+## Portfolio Relevance
 
-## Autor
+This case is useful in a portfolio because it demonstrates more than modeling accuracy. It shows judgment around analytical framing, code organization, validation, and business translation, which is what makes a data project feel closer to real production work.
 
-Desenvolvido por **Diego Pablo de Menezes**
+## Author
 
-Proposto para avaliar soluções avançadas de Big Data, Insights de Negócios e metodologias modernas de desenvolvimento (DataOps/MLOps).
+**Diego Pablo**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diego-pablo/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:diegopmenezes@hotmail.com)
+- Portfolio: [diego-pablo.vercel.app](https://diego-pablo.vercel.app/)
+- LinkedIn: [linkedin.com/in/diego-pablo](https://www.linkedin.com/in/diego-pablo/)
